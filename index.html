@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.className='js'</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Lotes en Salto · Mateo Salazar</title>
+<meta property="og:title" content="Lotes en Salto desde US$ 25.000">
+<meta property="og:description" content="Recorré el barrio en 360 y mirá qué lotes quedan disponibles.">
+<meta property="og:image" content="aerea-01.jpg">
+<link rel="preload" as="image" href="aerea-01.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pannellum/2.5.6/pannellum.css">
+<style>
+:root{--ink:#2B2F33;--mint:#7FDBB6;--mintd:#1F8A6A;--soft:#EEF8F4;--paper:#F6FAF8;--line:#DCE5E1;--muted:#6B7378}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:#fff;color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;line-height:1.55;overflow-x:hidden}
+.wrap{max-width:1100px;margin:0 auto;padding:0 18px}
+h1,h2{font-family:Fraunces,Georgia,serif;font-weight:300;letter-spacing:-.015em;line-height:1.05}
+h2{font-size:clamp(34px,6vw,58px);margin:8px 0 12px}
+.eyebrow{color:var(--mintd);font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:500}
+.sub{max-width:580px;color:var(--muted);font-size:17px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:99px;font:500 15px 'DM Sans';text-decoration:none;cursor:pointer;border:0;transition:transform .2s,background .2s}
+.btn:active{transform:scale(.97)}
+.btn.mint{background:var(--mint);color:#16302a}.btn.mint:hover{background:#6ad0a8}
+.btn.glass{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.5);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+
+/* HERO */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;color:#fff;background:#1d2a30}
+.hero video,.hero .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.05)}
+.hero video{opacity:0;transition:opacity 1s ease}
+.hero .poster{animation:kb 18s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1.05)}to{transform:scale(1.16) translate(-1.5%,-1%)}}
+.hero-in>*{animation:up .9s cubic-bezier(.2,.7,.2,1) both}.hero-in>*:nth-child(2){animation-delay:.12s}.hero-in>*:nth-child(3){animation-delay:.24s}.hero-in>*:nth-child(4){animation-delay:.36s}
+@keyframes up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.hero .poster{background:url(aerea-01.jpg) center/cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(43,47,51,.30),rgba(43,47,51,.05) 35%,rgba(30,36,40,.88))}
+.hero-in{position:relative;z-index:2;padding:0 18px 60px;max-width:1100px;margin:0 auto;width:100%}
+.hero h1{font-size:clamp(50px,11vw,128px);margin:12px 0 14px;text-shadow:0 2px 30px rgba(0,0,0,.3)}
+.hero h1 em{font-style:normal;color:var(--mint)}
+.hero p{max-width:520px;font-size:clamp(16px,2.3vw,20px);opacity:.94}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+
+/* DATOS */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:-34px;position:relative;z-index:3}
+.stat{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px 22px;box-shadow:0 12px 34px rgba(43,47,51,.08)}
+.stat b{display:block;font:400 clamp(26px,4vw,36px) Fraunces,serif;color:var(--mintd);line-height:1.15}
+.stat span{font-size:14px;color:var(--muted)}
+section.blk{padding:88px 0 0}
+
+/* 360 */
+.pano-wrap{position:relative;margin-top:26px;border-radius:24px;overflow:hidden;background:#cfe0ea;box-shadow:0 20px 50px rgba(43,47,51,.18)}
+#pano{width:100%;height:min(70vh,620px)}
+.pano-load{position:absolute;left:50%;top:58px;transform:translateX(-50%);z-index:6;background:rgba(43,47,51,.7);color:#fff;padding:8px 16px;border-radius:99px;font-size:12px;letter-spacing:.06em;pointer-events:none;transition:opacity .5s}
+.pano-hint{position:absolute;left:50%;top:14px;transform:translateX(-50%);z-index:5;background:rgba(43,47,51,.62);color:#fff;padding:8px 16px;border-radius:99px;font-size:12px;letter-spacing:.08em;pointer-events:none;transition:opacity .6s;white-space:nowrap}
+.lotgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin-top:26px}
+.lotcard{background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:10px;box-shadow:0 8px 24px rgba(43,47,51,.06);transition:transform .25s,box-shadow .25s}
+.lotcard:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(43,47,51,.12)}
+.lotcard svg{width:100%;height:auto;border-radius:12px;background:#F1F5F3}
+.lotcard b{font:400 24px Fraunces,serif}
+.lp{font:400 26px Fraunces,serif;color:var(--mintd);line-height:1.1}
+.lotcard small{color:var(--muted);font-size:13px}
+.lotcard .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}
+.lotcard .btn{padding:10px 16px;font-size:13px}
+.btn.line{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.lotview{position:fixed;inset:0;z-index:200;background:#111}
+.lotview[hidden]{display:none}
+#lvpano{width:100%;height:100%}
+.lv-close{position:absolute;left:14px;top:14px;z-index:5}
+
+#pano{position:relative;overflow:hidden;background:#cfe0ea;touch-action:none;cursor:grab;user-select:none;-webkit-user-select:none}
+#pano.drag{cursor:grabbing}
+#pano img{position:absolute;left:0;top:0;max-width:none;pointer-events:none;-webkit-user-drag:none;will-change:transform;transition:opacity .5s}
+.pano-wrap.full{position:fixed;inset:0;z-index:150;border-radius:0;margin:0}
+.pano-wrap.full #pano{height:100svh}
+.pv-bar{position:absolute;left:12px;right:12px;bottom:12px;z-index:8;display:flex;align-items:center;justify-content:space-between;gap:10px;pointer-events:none}
+.pv-bar>*{pointer-events:auto}
+.pv-title{background:rgba(43,47,51,.66);color:#fff;padding:9px 14px;border-radius:99px;font-size:13px;max-width:52%;line-height:1.25;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.pv-btns{display:flex;gap:8px}
+.pv-btns button{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.5);background:rgba(43,47,51,.66);color:#fff;font:700 20px 'DM Sans';cursor:pointer;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.pv-close{display:none;position:absolute;left:14px;top:14px;z-index:9;background:rgba(43,47,51,.7);color:#fff;border:1px solid rgba(255,255,255,.5);padding:10px 16px;border-radius:99px;font:500 14px 'DM Sans';cursor:pointer}
+.pano-wrap.full .pv-close{display:block}
+.enter-row{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin-top:18px}
+.enter-tip{font-size:14px;color:var(--muted)}
+.pnlm-hotspot-base.pnlm-scene{width:46px!important;height:46px!important;border-radius:50%!important;background:rgba(127,219,182,.92)!important;border:3px solid #fff;box-shadow:0 0 0 0 rgba(127,219,182,.7);animation:ring 1.8s infinite;background-image:none!important}
+.pnlm-hotspot-base.pnlm-scene::after{content:'➜';position:absolute;inset:0;display:grid;place-items:center;color:#16302a;font:700 20px 'DM Sans'}
+@keyframes ring{70%{box-shadow:0 0 0 18px rgba(127,219,182,0)}100%{box-shadow:0 0 0 0 rgba(127,219,182,0)}}
+.pnlm-tooltip span{background:rgba(43,47,51,.82)!important;color:#fff!important;font:500 13px 'DM Sans'!important;padding:6px 12px!important;border-radius:99px!important}
+.scenes{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.scenes button{border:1px solid var(--line);background:#fff;color:var(--ink);padding:11px 18px;border-radius:99px;font:500 14px 'DM Sans';cursor:pointer;transition:all .2s}
+.scenes button.on{background:var(--mint);border-color:var(--mint);color:#16302a}
+.note{margin-top:12px;font-size:13px;color:var(--muted)}
+
+/* PLANO ANIMADO */
+.plan-sec{position:relative;margin-top:88px;padding:64px 0 72px;background:linear-gradient(180deg,#fff,var(--soft) 12%,var(--soft) 88%,#fff)}
+.plan-stick{display:block}
+.plan-head{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:flex-end;justify-content:space-between;margin-bottom:10px}
+.counter{display:flex;gap:18px;align-items:baseline}
+.counter b{font:300 clamp(44px,8vw,76px) Fraunces,serif;color:var(--mintd);line-height:1}
+.counter span{font-size:14px;color:var(--muted);max-width:150px;line-height:1.3}
+.map{position:relative;background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:0 20px 50px rgba(43,47,51,.1);padding:8px}
+.map svg{display:block;width:100%;height:auto}
+.lot{cursor:pointer;transition:fill .5s,stroke .5s}
+.lot.av{fill:var(--mint);stroke:#fff;stroke-width:1.6;filter:url(#glow)}
+.lot.av.dim{fill:#E3EEE9;stroke:#B9CFC6;stroke-width:1.2;filter:none}
+.lot.av.flash{fill:#b9f2dc;stroke:#1F8A6A;stroke-width:2.4}
+.lot.x{fill:url(#hatch);stroke:#A5AEB3;stroke-width:1}
+.lot:hover{stroke:var(--ink);stroke-width:2}
+.lot.av:hover{stroke:#1F8A6A}
+.lot.sel{stroke:var(--ink);stroke-width:2.6}
+.num{font:500 12px 'DM Sans';fill:#58636a;text-anchor:middle;pointer-events:none}
+.num.on{fill:#0f3d2e}
+.ar{font:400 8px 'DM Sans';fill:#6f7a80;text-anchor:middle;pointer-events:none}
+.street{font:400 9px 'DM Sans';fill:#9aa7ad;letter-spacing:.14em;text-anchor:middle;text-transform:uppercase}
+.route{fill:none;stroke:var(--mintd);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1 7;opacity:.9;animation:dash 1.2s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-16}}
+.dot{filter:drop-shadow(0 0 6px #7FDBB6)}
+.dot{fill:#fff;stroke:var(--mintd);stroke-width:3}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.72}}
+.panel{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;margin-top:12px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px 18px}
+.panel b{font:400 22px Fraunces,serif}
+.panel small{display:block;color:var(--muted);font-size:13px}
+.tag{display:inline-block;font-size:12px;font-weight:500;padding:3px 10px;border-radius:99px;margin-right:8px;vertical-align:middle}
+.tag.av{background:var(--soft);color:var(--mintd)}.tag.x{background:#ECEFF0;color:#79848a}
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px;font-size:12px;color:var(--muted)}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-3px;margin-right:6px}
+
+/* PAGO */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:26px}
+.step{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:22px}
+.step i{font:300 38px Fraunces,serif;color:var(--mintd);font-style:normal}
+.step h3{font:500 18px 'DM Sans';margin:6px 0}
+.step p{color:var(--muted);font-size:15px}
+.final{margin-top:88px;padding:76px 0 120px;text-align:center;background:linear-gradient(180deg,var(--soft),#fff)}
+.final .ctas{justify-content:center}
+.legal{margin-top:34px;font-size:12px;color:var(--muted)}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:60;background:#25D366;color:#073b1d;border-radius:99px;padding:14px 20px;font:700 15px 'DM Sans';text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.28)}
+.js .reveal:not(.in){opacity:0;transform:translateY(26px)}
+.reveal{transition:opacity .8s ease,transform .8s ease}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.hero video{display:none}.plan-sec{height:auto}.plan-stick{position:static;height:auto}.lot.lit{animation:none}}
+@media (max-width:640px){.ar{display:none}.pano-hint{font-size:11px}#pano{height:58vh}}
+</style>
+</head>
+<body>
+
+<header class="hero" id="top">
+  <div class="poster"></div>
+  <video id="hv" muted playsinline preload="auto" poster="aerea-01.jpg"></video>
+  <div class="hero-in">
+    <div class="eyebrow" style="color:#d9f5ea">Mateo Salazar · Col. 7292</div>
+    <h1>Lotes en<br><em>Salto</em></h1>
+    <p>Barrio semi cerrado a metros de la Rotonda de las Banderas. Recorrelo en 360 y mirá qué lotes quedan.</p>
+    <div class="ctas">
+      <a class="btn mint" href="#recorrido">Recorrer en 360</a>
+      <a class="btn glass" href="#lotes">Ver los lotes que quedan</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="stats">
+    <div class="stat reveal"><b data-count="25000" data-pre="Desde US$ ">0</b><span>Precio de lanzamiento</span></div>
+    <div class="stat reveal"><b>800 a 1.300 m²</b><span>Superficie de los lotes</span></div>
+    <div class="stat reveal"><b>Luz, agua y gas</b><span>Servicios en el barrio</span></div>
+    <div class="stat reveal"><b>Semi cerrado</b><span>A metros de la rotonda y la ruta</span></div>
+  </div>
+
+</div>
+
+<section class="plan-sec" id="lotes">
+  <div class="plan-stick">
+    <div class="wrap" style="width:100%">
+      <div class="plan-head">
+        <div>
+          <div class="eyebrow">Plano del loteo</div>
+          <h2 style="margin:6px 0 0;font-size:clamp(30px,5vw,50px)">Los lotes que quedan</h2>
+        </div>
+        <div class="counter"><b id="cnt">0</b><span>lotes disponibles<br><em id="cntx" style="font-style:normal;opacity:.8"></em></span></div>
+      </div>
+      <div class="map"><svg id="plan" viewBox="165 78 750 550" role="img" aria-label="Plano de lotes con los disponibles resaltados"></svg></div>
+      <div class="panel" id="panel"><div><b>Tocá un lote</b><small>Mirá su superficie y consultá por WhatsApp.</small></div></div>
+      <div class="legend"><span><i style="background:var(--mint)"></i>Disponible</span><span><i style="background:#cfd5d8"></i>No disponible</span><span>Tocá cualquier lote para ver sus datos</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <section class="blk" id="recorrido">
+    <div class="eyebrow reveal">Recorrido en 360</div>
+    <h2 class="reveal">Seis puntos de vista<br>del loteo</h2>
+    <p class="sub reveal">Cada punto de vista es una foto real del dron, nítida y continua. Arrastrá con el dedo, hacé zoom, o tocá "Entrar en 360" y movelo con el celular para mirar los costados.</p>
+    <div class="pano-wrap">
+      <div class="pano-hint" id="phint">Arrastrá o movelo con el celular</div><div class="pano-load" id="pload">Cargando…</div>
+      <div id="pano"></div>
+    </div>
+    <div class="enter-row"><button class="btn mint" id="enter">Entrar en 360</button><span class="enter-tip">En el celular, movelo para mirar a tu alrededor</span></div>
+    <div class="scenes" id="scenes"><button data-s="vp1" class="on">Rotonda de las Banderas</button><button data-s="vp2">Ingreso al loteo</button><button data-s="vp3">Vista general del loteo</button><button data-s="vp4">Calles internas</button><button data-s="vp5">Costado y avenida</button><button data-s="vp6">Avenida de acceso</button></div>
+    <p class="note">Fotos reales tomadas con dron en el terreno, sin retoques.</p>
+  </section>
+  <section class="blk" id="cadalote">
+    <div class="eyebrow reveal">Lote por lote</div>
+    <h2 class="reveal">Elegí el que más te guste</h2>
+    <p class="sub reveal">Cada ficha tiene la superficie del plano y su precio. Tocá "Ver en el plano" para ubicarlo, o "Consultar" para coordinar una visita.</p>
+    <div class="lotgrid" id="lotcards"></div>
+  </section>
+</div>
+<div class="lotview" id="lotview" hidden><button class="btn mint lv-close" id="lvclose">← Volver</button><div id="lvpano"></div></div>
+
+
+
+<div class="wrap">
+  <section class="blk" style="padding-top:20px">
+    <div class="eyebrow reveal">Cómo comprar</div>
+    <h2 class="reveal">Dos formas de pago</h2>
+    <div class="steps">
+      <div class="step reveal"><i>01</i><h3>Contado</h3><p>Con posibilidad de negociar el valor.</p></div>
+      <div class="step reveal"><i>02</i><h3>Anticipo y cuotas</h3><p>50 % de anticipo y cuotas por la diferencia.</p></div>
+      <div class="step reveal"><i>03</i><h3>Pedí el plano con precios</h3><p>Escribí "SALTO" por WhatsApp y te lo mandamos.</p></div>
+    </div>
+  </section>
+</div>
+
+<div class="final">
+  <div class="wrap">
+    <div class="eyebrow reveal">Hablemos</div>
+    <h2 class="reveal">¿Cuál es tu lote?</h2>
+    <p class="sub reveal" style="margin:0 auto">Escribinos y coordinamos una visita al terreno.</p>
+    <div class="ctas reveal"><a class="btn mint" id="wa2" target="_blank" rel="noopener">Escribir "SALTO" por WhatsApp</a></div>
+    <p class="legal">Mateo Salazar · Col. 7292. Precios en dólares, de contado con posibilidad de negociar el valor, o 50 % de anticipo y cuotas. Precios y disponibilidad sujetos a cambios. Plano ilustrativo: las medidas y la disponibilidad se confirman por WhatsApp.</p>
+  </div>
+</div>
+<a class="fab" id="wa1" target="_blank" rel="noopener">WhatsApp</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pannellum/2.5.6/pannellum.js"></script>
+<script>
+const WHATSAPP="5492215424750";
+const waLink=t=>"https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(t);
+const waGen=waLink("Hola Mateo, escribo por los lotes de Salto. Quiero recibir el plano con precios.");
+document.getElementById('wa1').href=waGen;document.getElementById('wa2').href=waGen;
+
+const hv=document.getElementById('hv');
+const VIDEO_URL='https://charming-jalebi-4d8732.netlify.app/hero.mp4';
+if(!matchMedia('(prefers-reduced-motion:reduce)').matches&&VIDEO_URL){
+  hv.src=VIDEO_URL;
+  hv.addEventListener('playing',()=>{hv.style.opacity=1;});
+  hv.addEventListener('timeupdate',()=>{if(hv.duration&&hv.currentTime>hv.duration-0.9)hv.style.opacity=0;});
+  hv.addEventListener('ended',()=>{hv.currentTime=0;hv.play().catch(()=>{});});
+  hv.play().catch(()=>{});
+}
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');const c=e.target.querySelector('[data-count]');if(c)count(c);io.unobserve(e.target);}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+setTimeout(()=>document.querySelectorAll('.reveal:not(.in)').forEach(e=>{const r=e.getBoundingClientRect();if(r.top<innerHeight*1.2)e.classList.add('in');}),2500);
+addEventListener('load',()=>setTimeout(()=>document.querySelectorAll('.reveal:not(.in)').forEach(e=>{if(e.getBoundingClientRect().top<innerHeight)e.classList.add('in');}),600));
+function count(el){const to=+el.dataset.count,pre=el.dataset.pre||'',t0=performance.now();(function f(t){const p=Math.min(1,(t-t0)/1400),v=Math.round(to*(1-Math.pow(1-p,3)));el.textContent=pre+v.toLocaleString('es-AR');if(p<1)requestAnimationFrame(f);})(t0);}
+
+/* ---- puntos de vista: foto real que siempre llena la pantalla (sin negro), arrastrar, zoom y giroscopio ---- */
+(function(){
+  const VP=[['vp1','Rotonda de las Banderas'],['vp2','Ingreso al loteo'],['vp3','Vista general del loteo'],['vp4','Calles internas'],['vp5','Costado y avenida'],['vp6','Avenida de acceso']];
+  const wrap=document.getElementById('pano').parentElement,box=document.getElementById('pano');
+  const hint=document.getElementById('phint'),pl=document.getElementById('pload');
+  box.innerHTML='<img alt="Vista aérea del loteo en Salto" draggable="false">';
+  const img=box.firstChild;
+  const bar=document.createElement('div');bar.className='pv-bar';
+  bar.innerHTML='<div class="pv-title" id="pvt"></div><div class="pv-btns"><button id="pvp" aria-label="Anterior">‹</button><button id="pvn" aria-label="Siguiente">›</button><button id="pvz" aria-label="Acercar">+</button><button id="pvm" aria-label="Alejar">−</button></div>';
+  wrap.appendChild(bar);
+  const close=document.createElement('button');close.className='pv-close';close.textContent='← Volver';wrap.appendChild(close);
+  let cur=0,nw=1,nh=1,s0=1,s=1,x=0,y=0,vx=0,vy=0,drag=false,lx=0,ly=0,pinch=0,auto=true,t0=performance.now(),g0=null,gyro=false;
+  const pts=new Map();
+  function clamp(){const W=box.clientWidth,H=box.clientHeight,w=nw*s,h=nh*s;x=w<=W?(W-w)/2:Math.min(0,Math.max(W-w,x));y=h<=H?(H-h)/2:Math.min(0,Math.max(H-h,y));}
+  function draw(){img.style.width=nw*s+'px';img.style.height=nh*s+'px';img.style.transform='translate3d('+x+'px,'+y+'px,0)';}
+  function fit(keep){const W=box.clientWidth,H=box.clientHeight;s0=Math.max(W/nw,H/nh);if(!keep||s<s0)s=s0;clamp();draw();}
+  function zoomAt(f,cx,cy){const ns=Math.min(s0*3,Math.max(s0,s*f)),k=ns/s;x=cx-(cx-x)*k;y=cy-(cy-y)*k;s=ns;clamp();draw();}
+  function stopAuto(){if(auto){auto=false;hint.style.opacity=0;}}
+  function load(i){
+    cur=(i+VP.length)%VP.length;pl.style.opacity=1;img.style.opacity=0;
+    document.querySelectorAll('#scenes button').forEach((b,k)=>b.classList.toggle('on',k===cur));
+    document.getElementById('pvt').textContent=VP[cur][1]+'  ·  '+(cur+1)+'/'+VP.length;
+    const im=new Image();im.onload=()=>{nw=im.naturalWidth;nh=im.naturalHeight;img.src=im.src;s=0;x=0;y=0;vx=vy=0;g0=null;fit(false);img.style.opacity=1;pl.style.opacity=0;t0=performance.now();};
+    im.onerror=()=>{pl.textContent='No se pudo cargar la foto';};
+    im.src=VP[cur][0]+'.jpg';
+  }
+  (function loop(t){requestAnimationFrame(loop);
+    if(auto&&!gyro){const W=box.clientWidth,w=nw*s;if(w>W+4){x=-(w-W)/2+Math.sin((t-t0)/4200)*(w-W)/2*.85;clamp();draw();}}
+    else if(!drag&&!gyro&&(Math.abs(vx)>.1||Math.abs(vy)>.1)){x+=vx;y+=vy;vx*=.93;vy*=.93;clamp();draw();}})(0);
+  box.addEventListener('pointerdown',e=>{box.setPointerCapture(e.pointerId);pts.set(e.pointerId,[e.clientX,e.clientY]);stopAuto();drag=true;box.classList.add('drag');lx=e.clientX;ly=e.clientY;vx=vy=0;if(pts.size==2){const a=[...pts.values()];pinch=Math.hypot(a[0][0]-a[1][0],a[0][1]-a[1][1]);}});
+  box.addEventListener('pointermove',e=>{if(!pts.has(e.pointerId))return;pts.set(e.pointerId,[e.clientX,e.clientY]);
+    if(pts.size==2){const a=[...pts.values()],d=Math.hypot(a[0][0]-a[1][0],a[0][1]-a[1][1]),r=box.getBoundingClientRect();if(pinch)zoomAt(d/pinch,(a[0][0]+a[1][0])/2-r.left,(a[0][1]+a[1][1])/2-r.top);pinch=d;return;}
+    const dx=e.clientX-lx,dy=e.clientY-ly;lx=e.clientX;ly=e.clientY;x+=dx;y+=dy;vx=dx;vy=dy;clamp();draw();});
+  const up=e=>{pts.delete(e.pointerId);pinch=0;if(!pts.size){drag=false;box.classList.remove('drag');}};
+  box.addEventListener('pointerup',up);box.addEventListener('pointercancel',up);
+  box.addEventListener('wheel',e=>{if(!wrap.classList.contains('full'))return;e.preventDefault();stopAuto();const r=box.getBoundingClientRect();zoomAt(e.deltaY<0?1.15:.87,e.clientX-r.left,e.clientY-r.top);},{passive:false});
+  const mid=()=>[box.clientWidth/2,box.clientHeight/2];
+  document.getElementById('pvz').onclick=()=>{stopAuto();zoomAt(1.4,...mid());};
+  document.getElementById('pvm').onclick=()=>{stopAuto();zoomAt(.7,...mid());};
+  document.getElementById('pvp').onclick=()=>load(cur-1);
+  document.getElementById('pvn').onclick=()=>load(cur+1);
+  document.getElementById('scenes').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;load([...document.querySelectorAll('#scenes button')].indexOf(b));});
+  function onOri(e){
+    if(e.alpha==null&&e.gamma==null)return;
+    if(!g0){g0={a:e.alpha||0,b:e.beta||0,x:x,y:y};return;}
+    const da=(((e.alpha||0)-g0.a+540)%360)-180,db=(e.beta||0)-g0.b;
+    x=g0.x+da*(nw*s/84);y=g0.y+db*(nh*s/50);clamp();draw();}
+  async function startGyro(){
+    try{if(typeof DeviceOrientationEvent!=='undefined'&&DeviceOrientationEvent.requestPermission){const r=await DeviceOrientationEvent.requestPermission();if(r!=='granted')return;}}catch(_){return;}
+    if(!('DeviceOrientationEvent' in window))return;
+    gyro=true;stopAuto();g0=null;addEventListener('deviceorientation',onOri);}
+  function enter(){wrap.classList.add('full');document.body.style.overflow='hidden';setTimeout(()=>fit(false),30);stopAuto();startGyro();}
+  function leave(){wrap.classList.remove('full');document.body.style.overflow='';gyro=false;removeEventListener('deviceorientation',onOri);setTimeout(()=>fit(false),30);}
+  document.getElementById('enter').addEventListener('click',enter);
+  close.addEventListener('click',leave);
+  addEventListener('keydown',e=>{if(e.key==='Escape'&&wrap.classList.contains('full'))leave();});
+  addEventListener('resize',()=>fit(true));
+  load(0);
+})();
+
+/* ---- plano animado ---- */
+const LOTS=[
+ // Manzana 1
+ ['1-1',1,1,795.50,'a',[[390,102],[485,102],[485,152],[390,152]]],
+ ['1-2',1,2,800.00,'a',[[390,152],[485,152],[485,200],[390,200]]],
+ ['1-3',1,3,800.00,'x',[[390,200],[485,200],[485,248],[390,248]]],
+ ['1-4',1,4,800.00,'x',[[390,248],[485,248],[485,297],[390,297]]],
+ ['1-5',1,5,800.00,'a',[[342,198],[388,198],[388,295],[342,295]]],
+ ['1-6',1,6,800.00,'x',[[292,198],[340,198],[340,295],[292,295]]],
+ ['1-7',1,7,805.03,'a',[[195,247],[290,247],[290,295],[195,295]]],
+ ['1-8',1,8,806.81,'a',[[195,198],[290,198],[290,247],[195,247]]],
+ ['1-9',1,9,804.09,'a',[[195,148],[290,148],[290,198],[195,198]]],
+ ['1-10',1,10,796.86,'a',[[195,102],[290,102],[290,148],[195,148]]],
+ ['1-11',1,11,800.00,'a',[[292,102],[340,102],[340,198],[292,198]]],
+ ['1-12',1,12,800.00,'a',[[342,102],[388,102],[388,198],[342,198]]],
+ // Manzana 2
+ ['2-11',2,11,null,'x',[[190,332],[288,332],[288,380],[190,380]]],
+ ['2-10',2,10,817.03,'a',[[190,380],[288,380],[288,428],[190,428]]],
+ ['2-12',2,12,800.00,'a',[[289,333],[337,333],[337,428],[289,428]]],
+ ['2-13',2,13,800.00,'a',[[338,333],[385,333],[385,428],[338,428]]],
+ ['2-1',2,1,795.50,'a',[[387,333],[483,333],[483,382],[387,382]]],
+ ['2-2',2,2,800.00,'a',[[387,382],[483,382],[483,431],[387,431]]],
+ ['2-9',2,9,1219.75,'a',[[189,429],[336,429],[336,478],[189,478]]],
+ ['2-3',2,3,null,'x',[[337,432],[483,432],[483,480],[337,480]]],
+ ['2-8',2,8,990.28,'a',[[188,478],[302,478],[310,513],[297,527],[188,526]]],
+ ['2-7',2,7,null,'x',[[187,527],[297,527],[260,603],[187,565]]],
+ ['2-6',2,6,976.20,'a',[[297,527],[310,513],[378,572],[280,615],[260,603]]],
+ ['2-5',2,5,928.12,'a',[[310,480],[353,486],[422,544],[380,572],[310,513]]],
+ ['2-4',2,4,799.09,'a',[[353,480],[482,480],[482,492],[422,544],[353,487]]],
+ // Manzana 3
+ ['3-9',3,9,938.56,'a',[[522,105],[637,105],[637,153],[522,153]]],
+ ['3-8',3,8,943.06,'a',[[522,153],[637,153],[637,201],[522,201]]],
+ ['3-7',3,7,943.06,'a',[[522,201],[637,201],[637,251],[522,251]]],
+ ['3-6',3,6,943.06,'a',[[522,251],[637,251],[637,299],[522,299]]],
+ ['3-5',3,5,939.80,'a',[[522,299],[635,299],[633,347],[522,347]]],
+ ['3-4',3,4,964.93,'a',[[522,347],[627,347],[563,420],[522,420]]],
+ ['3-10',3,10,null,'x',[[638,105],[685,105],[685,202],[638,202]]],
+ ['3-11',3,11,null,'x',[[687,105],[733,105],[733,252],[687,252]]],
+ ['3-3',3,3,null,'x',[[637,203],[685,203],[685,292],[637,340]]],
+ ['3-2',3,2,null,'x',[[687,252],[733,252],[688,292]]]
+];
+const NS='http://www.w3.org/2000/svg';
+const svg=document.getElementById('plan');
+const el=(n,a,p)=>{const e=document.createElementNS(NS,n);for(const k in a)e.setAttribute(k,a[k]);(p||svg).appendChild(e);return e;};
+const cen=p=>{let x=0,y=0;p.forEach(q=>{x+=q[0];y+=q[1];});return [x/p.length,y/p.length];};
+el('defs',{}).innerHTML='<pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#E4E8EA"/><line x1="0" y1="0" x2="0" y2="6" stroke="#C3CBCF" stroke-width="2"/></pattern><filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3.2" result="b"/><feFlood flood-color="#7FDBB6" flood-opacity=".9"/><feComposite in2="b" operator="in" result="g"/><feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge></filter>';
+el('rect',{x:165,y:78,width:750,height:550,fill:'#F1F5F3'});
+// espacio verde
+el('polygon',{points:'735,105 901,107 733,252',fill:'#DCEBDD',stroke:'#C4D8C6'});
+el('text',{x:790,y:134,class:'street'}).textContent='Espacio verde';
+// calles (rotulos)
+const st=(x,y,t,r)=>{const e=el('text',{x,y,class:'street',transform:r?`rotate(${r} ${x} ${y})`:''});e.textContent=t;};
+st(545,95,'Calle Osvaldo Pugliese');st(335,319,'Calle');st(505,330,'',0);
+st(178,330,'Calle sin nombre',-90);st(790,262,'Av. Antártida Argentina',-41);
+const g=el('g',{});
+const items=LOTS.map(l=>{
+  const [id,mz,n,area,st_,pts]=l;
+  const poly=el('polygon',{points:pts.map(p=>p.join(',')).join(' '),class:'lot '+(st_==='a'?'av':'x'),'data-id':id},g);
+  const c=cen(pts);
+  const t=el('text',{x:c[0],y:c[1]+(area&&st_==='a'?-1:4),class:'num'},g);t.textContent=n;
+  if(area&&st_==='a'){const a=el('text',{x:c[0],y:c[1]+9,class:'ar'},g);a.textContent=area.toLocaleString('es-AR',{minimumFractionDigits:0,maximumFractionDigits:2})+' m²';}
+  return {id,mz,n,area,av:st_==='a',poly,t,c};
+});
+// recorrido: vecino mas cercano entre los disponibles
+const av=items.filter(i=>i.av);let cur=av.find(i=>i.id==='1-1'),order=[cur],left=av.filter(i=>i!==cur);
+while(left.length){let b=0,bd=1e9;left.forEach((i,k)=>{const d=Math.hypot(i.c[0]-cur.c[0],i.c[1]-cur.c[1]);if(d<bd){bd=d;b=k;}});cur=left.splice(b,1)[0];order.push(cur);}
+const route=el('path',{class:'route',d:'M'+order.map(i=>i.c.join(',')).join(' L')});
+const dot=el('circle',{class:'dot',r:5,cx:order[0].c[0],cy:order[0].c[1]});
+const totalLen=route.getTotalLength();
+document.getElementById('cntx').textContent=(items.length-av.length)+' no disponibles de '+items.length;
+const cnt=document.getElementById('cnt');
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+items.forEach(i=>{if(i.av)i.t.classList.add('on');});
+cnt.textContent=order.length;
+let playing=false,loopT=0;
+function setDot(f){const pt=route.getPointAtLength(totalLen*Math.min(1,f));dot.setAttribute('cx',pt.x);dot.setAttribute('cy',pt.y);}
+function play(){
+  if(playing||reduce)return;playing=true;clearInterval(loopT);
+  order.forEach(i=>{i.poly.classList.add('dim');i.t.classList.remove('on');});cnt.textContent=0;setDot(0);
+  let k=0;
+  const step=setInterval(()=>{
+    const i=order[k];i.poly.classList.remove('dim');i.poly.classList.add('flash');i.t.classList.add('on');
+    setTimeout(()=>i.poly.classList.remove('flash'),420);
+    k++;cnt.textContent=k;setDot(k/order.length);
+    if(k>=order.length){clearInterval(step);playing=false;wave();loopT=setInterval(wave,5200);}
+  },150);
+}
+function wave(){order.forEach((i,k)=>setTimeout(()=>{i.poly.classList.add('flash');setTimeout(()=>i.poly.classList.remove('flash'),380);},k*55));}
+let seen=false;
+new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting&&!seen){seen=true;setTimeout(play,350);}}),{threshold:.3}).observe(document.getElementById('plan'));
+setTimeout(()=>{if(!seen){/* si el observador no corre, queda todo iluminado */}},0);
+const PRICE=a=>a<900?25000:(a<=1000?30000:35000);
+const usd=n=>'US$ '+n.toLocaleString('es-AR');
+// fichas por lote
+(function(){
+  const box=document.getElementById('lotcards');
+  const list=items.filter(i=>i.av).sort((a,b)=>a.mz-b.mz||a.n-b.n);
+  fetch('lotes-index.json').then(r=>r.ok?r.json():[]).catch(()=>[]).then(have=>{
+    list.forEach(i=>{
+      const xs=i.poly.getAttribute('points').split(' ').map(q=>q.split(',').map(Number));
+      const mnx=Math.min(...xs.map(q=>q[0])),mxx=Math.max(...xs.map(q=>q[0])),mny=Math.min(...xs.map(q=>q[1])),mxy=Math.max(...xs.map(q=>q[1]));
+      const c=document.createElement('div');c.className='lotcard reveal';
+      const ar=i.area.toLocaleString('es-AR',{minimumFractionDigits:0,maximumFractionDigits:2});
+      const pr=usd(PRICE(i.area));const msg=`Hola Mateo, me interesa el lote ${i.n} de la Manzana ${i.mz} (${ar} m², ${pr}) en Salto. ¿Cómo coordinamos una visita?`;
+      const mini=`<svg viewBox="165 78 750 550" aria-hidden="true"><rect x="165" y="78" width="750" height="550" fill="#F1F5F3"/>${LOTS.map(l=>`<polygon points="${l[5].map(q=>q.join(',')).join(' ')}" fill="${l[0]===i.id?'#7FDBB6':'#DDE5E1'}" stroke="#fff" stroke-width="2"/>`).join('')}<circle cx="${i.c[0]}" cy="${i.c[1]}" r="22" fill="none" stroke="#1F8A6A" stroke-width="5"/></svg>`;
+      c.innerHTML=mini+`<div class="lp">${pr}</div><div><b>Lote ${i.n}</b><br><small>Manzana ${i.mz} · ${ar} m² · <span style="color:var(--mintd);font-weight:500">Disponible</span></small></div><div class="row"><a class="btn mint" target="_blank" rel="noopener" href="${waLink(msg)}">Consultar</a><button class="btn line" data-plan="${i.id}">Ver en el plano</button>${have.includes(i.id)?`<button class="btn line" data-p360="${i.id}">Ver 360</button>`:''}</div>`;
+      box.appendChild(c);io.observe(c);
+    });
+  });
+  box.addEventListener('click',e=>{
+    const b=e.target.closest('button');if(!b)return;
+    if(b.dataset.plan){const it=items.find(x=>x.id===b.dataset.plan);document.getElementById('plan').scrollIntoView({behavior:'smooth',block:'center'});setTimeout(()=>it.poly.dispatchEvent(new Event('click')),600);}
+    if(b.dataset.p360){const lv=document.getElementById('lotview');lv.hidden=false;const v=pannellum.viewer('lvpano',{type:'equirectangular',panorama:'lote-'+b.dataset.p360+'.jpg',autoLoad:true,hfov:95,pitch:-10,showFullscreenCtrl:false,compass:false,orientationOnByDefault:false});lv._v=v;try{v.startOrientation();}catch(_){}}
+  });
+  document.getElementById('lvclose').addEventListener('click',()=>{const lv=document.getElementById('lotview');lv.hidden=true;if(lv._v){lv._v.destroy();lv._v=null;}});
+})();
+// panel al tocar un lote
+const panel=document.getElementById('panel');let selEl=null;
+items.forEach(i=>i.poly.addEventListener('click',()=>{
+  if(selEl)selEl.classList.remove('sel');selEl=i.poly;i.poly.classList.add('sel');
+  const mz='Manzana '+i.mz,ar=i.area?i.area.toLocaleString('es-AR',{minimumFractionDigits:0,maximumFractionDigits:2})+' m²':'superficie a confirmar',pr=(i.av&&i.area)?usd(PRICE(i.area)):'';
+  const msg=i.av?`Hola Mateo, me interesa el lote ${i.n} de la ${mz} (${ar}, ${pr}) en Salto. ¿Cómo coordinamos una visita?`:`Hola Mateo, vi el lote ${i.n} de la ${mz} en Salto. ¿Hay otros lotes parecidos disponibles?`;
+  panel.innerHTML=`<div><b>Lote ${i.n} · ${mz}</b><small><span class="tag ${i.av?'av':'x'}">${i.av?'Disponible':'No disponible'}</span>${ar}${pr?' · <b style="font-weight:500;color:var(--mintd)">'+pr+'</b>':''}</small></div><a class="btn mint" target="_blank" rel="noopener" href="${waLink(msg)}">${i.av?'Consultar este lote':'Ver lotes parecidos'}</a>`;
+}));
+</script>
+</body>
+</html>
