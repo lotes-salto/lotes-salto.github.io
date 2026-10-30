@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=df64567f-1888-47aa-aefe-b6abde761ea2
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+<!-- This site is hosted on Netlify. Anyone can build and deploy a site
+     like this one for free: https://netlify.new/?utm_campaign=loops&utm_source=ai-legible&utm_medium=owned&utm_content=comment&utm_id=df64567f-1888-47aa-aefe-b6abde761ea2
+     Netlify hosting facts for this site: static/SSR served via Netlify Edge. -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Propiedades de Mateo Salazar</title>
+<link rel="preload" as="image" href="fotos/edificio.jpg" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--line:#E3E7E6;--gold:#1F8A6A;--mint:#7FDBB6;--soft:#EEF8F4;--ink:#2B2F33}
+*{box-sizing:border-box;margin:0}
+body{background:#3f8fe3;color:#fff;font-family:'DM Sans',system-ui,sans-serif;line-height:1.5}
+.wrap{max-width:1100px;margin:0 auto;padding:0 16px}
+
+/* Escenario fijo: la cámara baja por la fachada */
+.stage{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none;background:#1d4f7d}
+.stage img{position:absolute;top:0;left:0;max-width:none;will-change:transform;user-select:none}
+#soft{filter:blur(16px);opacity:0}
+.shade{position:fixed;inset:0;z-index:-1;pointer-events:none;background:#050c14;opacity:0;will-change:opacity}
+
+/* Hero */
+.hero{height:100vh;min-height:520px;position:relative}
+.stick{height:100%;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 20px}
+.hero-in{max-width:760px;will-change:transform,opacity}
+.eyebrow{font-size:12px;letter-spacing:.32em;text-transform:uppercase}
+h1{font-family:Fraunces,Georgia,serif;font-weight:300;font-size:clamp(42px,9vw,104px);line-height:1.02;letter-spacing:-.02em;margin:18px 0;text-shadow:0 2px 30px rgba(0,25,60,.5)}
+h1 em{font-style:normal;color:var(--mint)}
+.lead{font-size:clamp(15px,2.2vw,19px);max-width:520px;margin:0 auto;opacity:.92;text-shadow:0 1px 14px rgba(0,25,60,.5)}
+.cats{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:28px}
+.cat{font:500 14px 'DM Sans';color:#fff;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.4);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-radius:99px;padding:10px 18px;cursor:pointer;transition:all .2s}
+.cat:hover{background:var(--mint);color:#16302a;border-color:var(--mint)}
+.cat b{font-weight:500;opacity:.7;margin-left:6px}
+#grid{scroll-margin-top:76px}
+.cue{margin-top:30px;display:inline-flex;flex-direction:column;align-items:center;gap:8px;font-size:11px;letter-spacing:.28em;text-transform:uppercase;opacity:.9}
+.cue i{width:1px;height:42px;background:linear-gradient(#fff,transparent);animation:cue 1.8s ease-in-out infinite}
+@keyframes cue{0%{transform:scaleY(.2);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(.2);transform-origin:bottom}}
+
+/* Contenido */
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 0 26px;position:sticky;top:0;padding:12px 16px;z-index:5;background:rgba(8,14,22,.62);border-radius:0 0 18px 18px;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;white-space:nowrap;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#fff;padding:9px 18px;border-radius:99px;font:400 14px 'DM Sans';cursor:pointer;transition:all .2s}
+.chip:hover{border-color:var(--mint)}
+.chip.on{background:var(--mint);color:#16302a;border-color:var(--mint);font-weight:500}
+.grid{display:grid;gap:28px;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));padding-bottom:70px}
+.card{color:var(--ink);background:#fff;border-radius:22px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 14px 40px rgba(0,0,0,.3);transition:transform .25s,box-shadow .25s}
+.card[hidden]{display:none}
+.card:hover{transform:translateY(-3px);box-shadow:0 20px 48px rgba(0,0,0,.38)}
+.galw{position:relative}
+.ia{position:absolute;left:12px;bottom:12px;background:rgba(8,14,22,.62);color:#fff;font-size:11.5px;padding:5px 11px;border-radius:99px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.gal{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;aspect-ratio:4/3;background:#EEF1F0;scrollbar-width:none}
+.gal::-webkit-scrollbar{display:none}
+.gal img{flex:0 0 100%;width:100%;height:100%;object-fit:cover;scroll-snap-align:center}
+.ph{flex:0 0 100%;display:grid;place-items:center;text-align:center;padding:20px;background:linear-gradient(135deg,#E3F6EE,#F6F8F8);font-family:Fraunces,Georgia,serif;font-weight:300;font-size:28px}
+.ph small{display:block;font:500 13px 'DM Sans';color:#6B7378;margin-top:6px}
+.dots{font-size:12px;color:#6B7378;text-align:right;padding:6px 14px 0}
+.body{padding:18px 22px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tag{color:var(--gold);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:500}
+.ask{font-family:Fraunces,Georgia,serif;font-weight:400;font-size:22px;line-height:1.2;color:#1F8A6A}
+.price{font-family:Fraunces,Georgia,serif;font-weight:400;font-size:30px;line-height:1.15}
+.price.long{font-family:'DM Sans';font-weight:500;font-size:16px;line-height:1.4}
+.addr{color:#6B7378;font-size:14px}
+.facts{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0}
+.facts span{background:var(--soft);border-radius:99px;padding:4px 11px;font-size:12.5px;color:#41484d}
+details{border-top:1px solid var(--line);padding-top:8px;font-size:14px}
+summary{cursor:pointer;color:var(--gold);font-weight:500}
+details p{margin-top:8px;color:#3d4348}
+table{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px}
+th,td{text-align:left;padding:5px 4px;border-bottom:1px solid var(--line)}
+th{color:#6B7378;font-weight:500}
+.sold{opacity:.45;text-decoration:line-through}
+.cta{margin-top:auto;display:block;text-align:center;background:var(--mint);color:#1F3A30;font-weight:500;text-decoration:none;padding:14px;border-radius:99px;transition:background .2s}
+.cta:hover{background:#6ad0a8}
+footer{border-top:1px solid rgba(255,255,255,.2);padding:26px 0 48px;opacity:.78;font-size:13px}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.cue i{animation:none}.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<div class="stage" aria-hidden="true"><img id="sharp" src="fotos/edificio.jpg" alt=""><img id="soft" src="fotos/edificio.jpg" alt=""></div>
+<div class="shade" id="shade" aria-hidden="true"></div>
+
+<section class="hero">
+  <div class="stick">
+    <div class="hero-in" id="heroin">
+      <div class="eyebrow">Century 21 Alianza Urbana · La Plata</div>
+      <h1>Propiedades de<br><em>Mateo</em> Salazar</h1>
+      <p class="lead">Casas, departamentos, lotes y edificios en construcción. Mirá la cartera y escribime para coordinar una visita.</p>
+      <div class="cats" id="cats"></div>
+      <div class="cue"><span>Deslizá</span><i></i></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="chips" id="chips"></div>
+  <main class="grid" id="grid"></main>
+  <footer>Consultá precios y disponibilidad con Mateo. Actualizado: <span id="upd"></span>.</footer>
+</div>
+
+<script src="data.js"></script>
+<script>
+// Fondo: foto del rascacielos. La cámara baja con el scroll y se difumina (dos capas en crossfade)
+(function(){
+  const sh=document.getElementById('sharp'),so=document.getElementById('soft'),sd=document.getElementById('shade'),hi=document.getElementById('heroin');
+  const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  const ease=x=>x*x*(3-2*x);let H=0,tick=false;
+  function size(){const vw=innerWidth,vh=innerHeight,ar=2681/2000;
+    const W=Math.max(vw*1.15,(vh*1.7)/ar);H=W*ar;
+    for(const im of [sh,so]){im.style.width=W+'px';im.style.height=H+'px';im.style.left=(vw-W)/2+'px';}}
+  function upd(){tick=false;
+    const total=Math.max(1,document.documentElement.scrollHeight-innerHeight),p=Math.min(1,scrollY/total);
+    const tf=reduce?'none':`translate3d(0,${-(H-innerHeight)*p}px,0)`;sh.style.transform=so.style.transform=tf;
+    const b=ease(Math.min(1,Math.max(0,(p-.08)/.55)));so.style.opacity=b;sh.style.opacity=1-b*.15;
+    sd.style.opacity=Math.min(.6,p*1.3);
+    const h=Math.min(1,scrollY/(innerHeight*.6));hi.style.opacity=1-h;hi.style.transform=`translate3d(0,${-h*40}px,0)`;}
+  addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(upd);}},{passive:true});
+  addEventListener('resize',()=>{size();upd();});
+  size();upd();
+  // foto 4K: carga la versión liviana primero y cambia a la de alta calidad cuando termina de bajar
+  try{
+    const HD='https://fascinating-platypus-edee36.netlify.app/edificio-4k.jpg';
+    if(!(navigator.connection&&navigator.connection.saveData)){
+      const im=new Image();im.onload=()=>{sh.src=HD;so.src=HD;};im.src=HD;
+    }
+  }catch(e){}
+})();
+
+// Reemplazar por el número real de Mateo (formato internacional, sin + ni espacios)
+const WHATSAPP = "5492215424750";
+const D = window.DATA, props = D.propiedades;
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+document.getElementById('upd').textContent = D.actualizado.split('-').reverse().join('/');
+
+const FACTS = [
+  ['ambientes', v => v + ' amb.'], ['dormitorios', v => v + ' dorm.'], ['banos', v => v + ' baños'],
+  ['m2_cubiertos', v => v + ' m² cubiertos'], ['m2_terreno', v => v + ' m² terreno'],
+  ['cochera', v => 'Cochera: ' + v], ['pileta', v => 'Pileta: ' + v],
+  ['apto_credito', v => 'Apto crédito: ' + v], ['servicios', v => 'Servicios: ' + v],
+  ['antiguedad', v => 'Antigüedad: ' + v], ['entrega', v => 'Entrega: ' + v]
+];
+const EXTRA = [['alquiler','Alquiler'],['permuta','Permuta'],['financiacion_venta','Financiación'],
+  ['financiacion','Financiación'],['cocheras','Cocheras'],['avance_de_obra','Avance de obra'],['situacion','Situación']];
+
+function card(p){
+  const gal = p.fotos.length
+    ? p.fotos.map((f,i)=>`<img src="${esc(f)}" alt="${esc(p.tipo)}" loading="lazy" decoding="async">`).join('')
+    : `<div class="ph"><div>${esc(p.categoria === 'Edificios en construcción' ? 'En construcción' : p.categoria)}<small>${esc(p.direccion)}</small></div></div>`;
+  const facts = FACTS.filter(([k])=>p[k]).map(([k,f])=>`<span>${esc(f(p[k]))}</span>`).join('');
+  const extra = EXTRA.filter(([k])=>p[k]).map(([k,l])=>`<p><b>${l}:</b> ${esc(p[k])}</p>`).join('');
+  let units = '';
+  if(p.unidades && p.unidades.length > 1){
+    const disp = p.unidades.filter(u=>u.estado==='Disponible').length;
+    units = `<details><summary>Unidades (${disp} disponibles de ${p.unidades.length})</summary><table>
+      <tr><th>Piso</th><th>Unid.</th><th>Dorm.</th><th>m²</th><th>Estado</th></tr>
+      ${p.unidades.map(u=>`<tr class="${u.estado==='Vendida'?'sold':''}"><td>${esc(u.piso)}</td><td>${esc(u.unidad)}${u.orientacion?' ('+esc(u.orientacion)+')':''}</td><td>${u.dormitorios}</td><td>${esc(u.superficie)}</td><td>${esc(u.estado)}</td></tr>`).join('')}
+    </table></details>`;
+  }
+  const msg = encodeURIComponent(`Hola Mateo, me interesa la propiedad ${p.codigo} (${p.direccion}).`);
+  return `<article class="card" data-cat="${esc(p.categoria)}">
+    <div class="galw"><div class="gal">${gal}</div>${p.ilustrativa?'<span class="ia">Imagen ilustrativa · generada con IA</span>':''}</div>
+    ${p.fotos.length>1?`<div class="dots">Deslizá para ver ${p.fotos.length} fotos ›</div>`:''}
+    <div class="body">
+      <div class="tag">${esc(p.tipo)}</div>
+      <div class="ask">Consultá el precio con Mateo</div>
+      <div class="addr">${esc(p.direccion)}</div>
+      <div class="facts">${facts}</div>
+      <details><summary>Ver detalles</summary><p>${esc(p.descripcion||'')}</p>${extra}</details>
+      ${units}
+      <a class="cta" target="_blank" rel="noopener" href="https://wa.me/${WHATSAPP}?text=${msg}">Consultar por WhatsApp</a>
+    </div></article>`;
+}
+
+const cats = ['Todas', ...new Set(props.map(p=>p.categoria))];
+const grid = document.getElementById('grid'), chips = document.getElementById('chips');
+grid.innerHTML = props.map(card).join('');
+chips.innerHTML = cats.map((c,i)=>`<button class="chip${i?'':' on'}" data-c="${esc(c)}">${esc(c)}</button>`).join('');
+function setFilter(c,go){
+  chips.querySelectorAll('.chip').forEach(x=>x.classList.toggle('on', x.dataset.c===c));
+  grid.querySelectorAll('.card').forEach(k=>{k.hidden = c!=='Todas' && k.dataset.cat!==c; if(!k.hidden)k.classList.add('in');});
+  if(go){const y=grid.getBoundingClientRect().top+scrollY-76;scrollTo({top:y,behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});}
+}
+chips.addEventListener('click', e=>{const b=e.target.closest('.chip'); if(b) setFilter(b.dataset.c,true);});
+const cn={};props.forEach(p=>cn[p.categoria]=(cn[p.categoria]||0)+1);
+const catsEl=document.getElementById('cats');
+catsEl.innerHTML=cats.map(c=>`<button class="cat" data-c="${esc(c)}">${esc(c)}<b>${c==='Todas'?props.length:cn[c]}</b></button>`).join('');
+catsEl.addEventListener('click', e=>{const b=e.target.closest('.cat'); if(b) setFilter(b.dataset.c,true);});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.08});
+grid.querySelectorAll('.card').forEach(c=>{c.classList.add('reveal');io.observe(c);});
+</script>
+</body>
+</html>
